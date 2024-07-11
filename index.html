@@ -32,6 +32,18 @@
         .bluelight {
             color: blue;
         }
+        .blk {
+            color:black;
+        }
+        .nestTab{
+            width: 100%;
+        }
+        .adharBlue{
+            color: darkblue;
+        }
+        .brown{
+            color: brown;
+        }
     </style>
 </head>
 <body>
@@ -192,13 +204,35 @@
                 <td style="width: 2px; margin: 12px;"><input type="checkbox" name="Checkbox" id="checkbox"></td>
                 <td>
                     <span>*</span>
-                    5. Date of Birth/Incorporation/Agreement/Partnership or Trust Deed/Formation of body od individuals/Association of persons
+                    <b>5. Date of Birth/Incorporation/Agreement/Partnership or Trust Deed/Formation of body od individuals/Association of persons</b>
                 </td>
                 <td>
-                    <label for="dd" >DD</label>
-                    <label for="mm" style="padding-left: 4px;">MM</label>
-                    <label for="yyyy" style="padding-left: 4px;">YYYY</label>
-                    <input type="date" name="DD" id="dd">
+                    <label for="dd">DD</label>
+                    <label for="mm" style="padding-left: 20px;">MM</label>  
+                    <label for="yy" style="padding-left: 20px;">YYYY</label><br>                                  
+                    <select name="DD" id="dd">
+                        <option value="">DD</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                    </select>                                   
+                    <select name="MM" id="mm">
+                        <option value="">MM</option>
+                        <option value="jan">Jan</option>
+                        <option value="feb">Feb</option>
+                        <option value="mar">Mar</option>
+                        <option value="apr">Apr</option>
+                    </select>                    
+                    <select name="YY" id="yy">
+                      <option value="">YYYY</option>
+                      <option value="96">1996</option>
+                      <option value="97">1997</option>
+                      <option value="98">1998</option>
+                      <option value="99">1999</option>
+                    </select>
+                    
+                    
                 </td>
             </tr>
             <tr>
@@ -300,7 +334,15 @@
                     <b>State/Union Teritory</b>
                 </td>
                 <td>
-                    <input type="text" name="State" id="state">
+                    <select name="Union" id="union">
+                        <option value="">--Please choose an option--</option>
+                        <option value="tn">TamilNadu</option>
+                        <option value="kr">Kerala</option>
+                        <option value="kar">Karnataka</option>
+                        <option value="od">Odisa</option>
+                        <option value="mum">Mumbai</option>
+                        <option value="del">Delhi</option>
+                      </select>                      
                 </td>
             </tr>
             <tr>
@@ -318,7 +360,15 @@
                     <b>Country</b>
                 </td>
                 <td>
-                    <input type="text" name="Country" id="country">
+                    <select name="Country" id="country">
+                        <option value="">--Please choose an option--</option>
+                        <option value="in">India</option>
+                        <option value="pak">Pakistan</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="ger">Germany</option>
+                        <option value="sri">Srilanka</option>
+                      </select>                      
                 </td>
             </tr>
             <tr>
@@ -328,6 +378,320 @@
                 </td>
                 <td>
                     <input type="text" name="Zip" id="zip">
+                </td>
+            </tr>
+            <tr>
+                    <td style="width: 2px; margin: 12px;"><input type="checkbox" name="Checkbox" id="checkbox"></td>
+                <td colspan="2">
+                    <b>10.If you desire to update your other address, give required details & <u class="blk">Submit proof of other address also.</u></b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 2px; margin: 12px;"><input type="checkbox" name="Checkbox" id="checkbox"></td>
+                <td>
+                    <span>*</span>
+                    <b>11. Telephone no.</b><br>
+                    (Country code is compulsory)
+                </td>
+                <td>
+                    Country code (ISD code) <br>
+                    <select name="Countrycode" id="countrycode">
+                        <option value="">--Please select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select>   <br>
+                      <table class="nestTab" >
+                        <tbody>
+                          <tr>
+                            <td>
+                                <input type="radio" name="Mob" id="mob">
+                                <label for="mob">Mobile No.</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="Tel" id="tel">
+                                <label for="tel">Telephone No.</label>                                
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="nestTab" >
+                        <tbody>
+                          <tr>
+                            <td>
+                                <label for="areacode">Area/STD Code</label>
+                                <input type="text" name="Areacode" id="areacode">
+                            </td>
+                            <td>
+                                <label for="telcode">Telephone No./Mobile NO.</label>                                
+                                <input type="text" name="Telno" id="telno">
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>                      
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <b>Email ID</b>
+                </td>
+                <td>
+                    <input type="text" name="Email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    Incase of a citizen of India, then
+                </td>
+                <td>
+                    <input type="radio" name="Aadhar" id="aadhar">
+                    <label for="aadhar">Aadhar</label>
+                    <input type="radio" name="Eid" id="eid">
+                    <label for="eid">EID</label>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 2px; margin: 12px;"><input type="checkbox" name="Checkbox" id="checkbox"></td>
+                <td>
+                    <span>*</span>
+                    <b>12. AADHAR number:</b>
+                </td>
+                <td>
+                    <input type="text" name="Adhar" id="adhar"><br>
+                    <span class="adharBlue"><b>ncase aadhar number is provided,<br> then proof of aadhhaar along with supporting dcuments is too be submitted to the NSDL</span></b>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span>*</span>
+                    Name as per AADHAAR letter <br>
+                    or <br>
+                    as per the enrollment of ID of AADHAR application form
+                </td>
+                <td>
+                    <input type="text" name="Adhar2" id="adhar2"><br>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <b>13. GSTN</b>
+                </td>
+                <td>
+                    <input type="text" name="Gst" id="gst"><br>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 2px; margin: 12px;"><input type="checkbox" name="Checkbox" id="checkbox"></td>
+                <td colspan="2">
+                    <b>
+                        14. Mention other Permanent Account Numbers(PANs) if any, inadequently alloted to you.
+                        <u class="blk">Submit proof of Surrendered PANs along with the application.</u>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label for="pan1">PAN1</label><br>
+                    <input type="text" name="Pan1" id="pan">
+                </td>
+                <td>
+                    <label for="pan2">PAN2</label><br>
+                    <input type="text" name="Pan2" id="pan">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <label for="pan3">PAN3</label><br>
+                    <input type="text" name="Pan3" id="pan">
+                </td>
+                <td>
+                    <label for="pan4">PAN4</label><br>
+                    <input type="text" name="Pan4" id="pan">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <b>
+                        15. Verification
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    I/We 
+                    <input type="text" name="nam" id="nam">
+                    , the applicant, in the capacity of 
+                    <select name="app" id="app">
+                        <option value="">--Please select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select>
+                      do hereby declare that wht is stated above is true to <br> the best way 
+                      of my information  and beleif, <br>
+                      i have enclosed <input type="text" name="declare" id="declare">
+                      (number of documents) in support of proposed  changes/corrections.
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    place <input type="text" name="place" id="place">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <span class="blk" style="padding-left: 120px;">DD</span>
+                    <span class="blk">MM</span>
+                    <span class="blk">YYYY</span> <br>
+                    Verified today, the 18 -04 -2020
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    I/We have enclosed <br>
+                    <select name="Verify" id="verify">
+                        <option value="">--Please select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select>
+                      as proof <br>
+                      of identity, 
+                      <select name="Identity" id="identity">
+                        <option value="">--Please select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select> 
+                      as proof of address, <br>
+                      <select name="ad" id="ad">
+                        <option value="">--Please select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select>
+                      as proof of date of birth <br>
+                      and 
+                      <select name="pa" id="pa">
+                        <option value="">--Please select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select>
+                      as proof of PAN allotted.
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <b>Whether you wish to have?</b>
+                    <input type="radio" name="phyPan" id="phypan">
+                    <label for="Phypan">Physical PAN Card & e-PAN Card</label>
+                    <input type="radio" name="epan" id="epan">
+                    <label for="epan">Only e-PAN Card</label>
+                    <u class="blk"><b>Fees Applicable</b></u>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <b>Other Details</b>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <b>1. Depository Account Details</b>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <b>DP ID:</b>
+                    <input type="text" name="dpid" id="dpid">
+                    <b>Client ID:</b>
+                    <input type="text" name="clientid" id="clientid">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    <b>2. Payment Details</b>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="pay" id="pay">
+                </td>
+                <td colspan="2">
+                    <b>Online Payment</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    For Paperless PAN Application:
+                    <input type="radio" name="yes" id="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="no" id="no">
+                    <label for="no">No</label> <br>
+                    <input type="radio" name="dsc" id="dsc">
+                    <label for="dsc">DSC</label>
+                    <select name="payselect" id="payselect" style="width: 13%;">
+                        <option value="">--select--</option>
+                        <option value="1">001</option>
+                        <option value="2">002</option>
+                        <option value="3">003</option>
+                        <option value="4">004</option>
+                        <option value="5">005</option>
+                        <option value="6">006</option>
+                      </select>
+                      <span >
+                        <u class="brown">Guidelines for DSC user</u>
+                      </span> <br>
+                      Upload Photo 
+                      <input type="file" name="fil" id="file" style="padding-left: 360px;">
+                      Upload Signature
+                      <input type="file" name="sign" id="sign" style="padding-left: 81px;"> <br><br>
+                      Upload Document 
+                      <input type="file" name="doc" id="doc" style="padding-left: 331px;"> <br><br>
+
+
+                      <b>ALREADY UPLOADED PHOTO:</b>
+                      <input type="text" name="uplphoto" id="uplphoto" style="margin-left:231px"> <br><br>
+                      <b>ALREADY UPLOADED SIGNATURE:</b>
+                      <input type="text" name="uplsign" id="uplsign" style="margin-left:195px"> <br><br>
+                      <b>ALREADY UPLOADED DOCUMENTSS:</b>
+                      <input type="text" name="upldoc" id="upldoc" style="margin-left: 175px;height: 100px;"> <br>
+                      <button type="submit" style="margin-left: 529px;">Submit</button>
                 </td>
             </tr>
         </tbody>
